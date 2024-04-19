@@ -10,7 +10,7 @@ type ToDoCardProps = {
 
 const ToDoCard: React.FC<ToDoCardProps> = ({ todo, toggleCompletion }) => {
     return (
-      <div style={{ margin: '10px', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
+      <div style={{ margin: '10px', padding: '10px', border: '1px solid #ccc', borderRadius: '5px',backgroundColor: 'white', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
         <h3>{todo.title}</h3>
         <p>Description: {todo.description}</p>
         <p>Due Date: {todo.dueDate}</p>

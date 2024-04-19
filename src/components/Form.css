@@ -1,8 +1,19 @@
+body {
+    background: linear-gradient(to bottom right, purple, blue);
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .form-container {
     display: flex;
     flex-direction: column;
     max-width: 500px; /* Set the max width for the form */
     margin: 20px auto;
+    
+    
   }
   
   .form-input {
@@ -18,7 +29,8 @@
   }
   
   .form-button {
-    padding: 10px 20px;
+    padding: 10px 22px;
+    margin-left: 15px;
     background-color: #007bff;
     color: white;
     border: none;
