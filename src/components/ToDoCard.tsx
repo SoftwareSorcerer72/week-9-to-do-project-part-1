@@ -1,17 +1,21 @@
 
 
-import React from 'react';
-import { ToDo } from '../types';
+
+import { ToDo } from '../types'; 
 
 type ToDoCardProps = {
   todo: ToDo;
+  toggleCompletion: (id: number) => void;
 };
 
-const ToDoCard: React.FC<ToDoCardProps> = ({ todo }) => {
+const ToDoCard: React.FC<ToDoCardProps> = ({ todo, toggleCompletion }) => {
   return (
-    <div>
+    <div style={{ margin: '10px', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
       <h3>{todo.task}</h3>
       <p>Completed: {todo.completed ? 'Yes' : 'No'}</p>
+      <button onClick={() => toggleCompletion(todo.id)}>
+        {todo.completed ? 'Mark Incomplete' : 'Mark Complete'}
+      </button>
     </div>
   );
 };
