@@ -2,6 +2,8 @@
 
 export type ToDo = {
   id: number;
-  task: string;
-  completed: boolean; 
+  title: string;
+  description: string;
+  dueDate: string;
+  completed: boolean;
 };

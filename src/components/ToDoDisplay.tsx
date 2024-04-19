@@ -2,7 +2,7 @@
 
 
 import ToDoCard from './ToDoCard';
-import { ToDo } from '../types'; 
+import { ToDo } from './types'; 
 
 type ToDoDisplayProps = {
   todos: ToDo[];

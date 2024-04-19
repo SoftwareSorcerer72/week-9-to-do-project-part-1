@@ -5,15 +5,16 @@ import Nav from './components/Nav';
 import Form from './components/Form';
 import ToDoDisplay from './components/ToDoDisplay';
 import { ToDo } from './types'; 
-
 function App() {
   const [todos, setTodos] = useState<ToDo[]>([]);
 
-  const addTodo = (task: string) => {
+  const addTodo = (title: string, description: string, dueDate: string) => {
     const newTodo: ToDo = {
-      id: Date.now(), 
-      task,
-      completed: false 
+      id: Date.now(),
+      title,
+      description,
+      dueDate,
+      completed: false
     };
     setTodos([...todos, newTodo]);
   };
