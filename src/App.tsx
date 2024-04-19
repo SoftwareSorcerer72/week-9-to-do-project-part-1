@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+
+
+import { useState } from 'react';
 import Nav from './components/Nav';
 import Form from './components/Form';
 import ToDoDisplay from './components/ToDoDisplay';
-import { ToDo } from './types'; // Define your ToDo type in src/types.ts
+import { ToDo } from './types';
 
 function App() {
   const [todos, setTodos] = useState<ToDo[]>([]);
 
   const addTodo = (task: string) => {
-    const newTodo = { id: Date.now(), task };
+    const newTodo: ToDo = {
+      id: Date.now(),
+      task,
+      completed: false // Setting default completed status as false
+    };
     setTodos([...todos, newTodo]);
   };
 
